@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 from calculator_1 import add, mul, sub, div
 
 if __name__ == "__main__":
-    arg = sys.argv
-    l = len(arg)
+    l = len(argv)
     e2 = "Unknown operator. Available operators: +, -, * and /"
 
     if l != 4:
-        print("Usage: {} <a> <operator> <b>".format(arg[0]))
+        print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
-    a = int(arg[1])
-    b = int(arg[3])
-    o = arg[2]
+    a = int(argv[1])
+    b = int(argv[3])
+    o = argv[2]
 
     if o == "+":
         res = add(a, b)
