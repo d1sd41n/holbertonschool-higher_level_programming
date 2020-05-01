@@ -5,7 +5,7 @@ from calculator_1 import add, mul, sub, div
 if __name__ == "__main__":
     arg = sys.argv
     l = len(arg)
-    e1 = "Usage: ./100-my_calculator.py <a> <operator> <b>"
+    e1 = "Usage: " + arg[0] + " <a> <operator> <b>"
     e2 = "Unknown operator. Available operators: +, -, * and /"
 
     if l < 4:
