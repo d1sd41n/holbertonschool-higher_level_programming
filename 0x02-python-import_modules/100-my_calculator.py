@@ -5,11 +5,10 @@ from calculator_1 import add, mul, sub, div
 if __name__ == "__main__":
     arg = sys.argv
     l = len(arg)
-    e1 = "Usage: " + arg[0] + " <a> <operator> <b>"
     e2 = "Unknown operator. Available operators: +, -, * and /"
 
-    if l < 4:
-        print("{}".format(e1))
+    if l != 4:
+        print("Usage: {} <a> <operator> <b>".format(arg[0]))
         exit(1)
     a = int(arg[1])
     b = int(arg[3])
