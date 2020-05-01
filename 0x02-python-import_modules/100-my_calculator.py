@@ -8,7 +8,7 @@ if __name__ == "__main__":
     e1 = "Usage: ./100-my_calculator.py <a> <operator> <b>"
     e2 = "Unknown operator. Available operators: +, -, * and /"
 
-    if l - 1 != 3:
+    if l < 4:
         print("{}".format(e1))
         exit(1)
     a = int(arg[1])
