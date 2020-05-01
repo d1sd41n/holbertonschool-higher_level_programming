@@ -26,4 +26,4 @@ if __name__ == "__main__":
     else:
         print("{}".format(e2))
         exit(1)
-    print("{} {} {} = {}".format(a, o, b, res))
+    print("{:d} {} {:d} = {:d}".format(a, o, b, res))
