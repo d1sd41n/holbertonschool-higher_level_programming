@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+def best_score(a_dictionary):
+    if a_dictionary is None:
+        return None
 
-
-def multiply_by_2(a_dictionary):
-    n = dict(a_dictionary)
-    for i in n:
-        n[i] *= 2
-    return n
+    b_score = max(a_dictionary.values(), default=None)
+    for k, v in a_dictionary.items():
+        if v == b_score:
+            return k
