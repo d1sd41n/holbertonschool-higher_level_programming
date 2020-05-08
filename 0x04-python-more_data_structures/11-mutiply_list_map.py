@@ -2,4 +2,4 @@
 
 
 def mutiply_list_map(my_list=[], number=0):
-    return list(map(lambda value: value * number, my_list))
+    return list(map(lambda val: val * number, my_list))
