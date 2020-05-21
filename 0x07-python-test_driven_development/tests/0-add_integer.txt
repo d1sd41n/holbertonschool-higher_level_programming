@@ -1,0 +1,47 @@
+The 0-add_integer module
+==========================================
+Using add_integer
+************************************+*****
+
+test numbers:
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(333, 333)
+    666
+    >>> add_integer(50, -50)
+    0
+    >>> add_integer(-50, 50)
+    0
+    >>> add_integer(-50, -50)
+    -100
+    >>> add_integer(-50.1, -50)
+    -100
+    >>> add_integer(-50, -50.666)
+    -100
+    >>> add_integer(568)
+    666
+
+test not int:
+    >>> add_integer("hell yeah")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer(44, "hell yeah")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+    >>> add_integer("44", "hell yeah")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer(None, 666)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> add_integer([1, "hell-o"], 666)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+    >>> print(add_integer(ww, -2))
+    Traceback (most recent call last):
+    ...
+    NameError: name 'ww' is not defined
