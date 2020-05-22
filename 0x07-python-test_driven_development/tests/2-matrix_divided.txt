@@ -1,0 +1,73 @@
+The 2-matrix_divided module
+==========================================
+Using matrix_divided
+************************************+*****
+
+module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+test numbers:
+    >>> m = [[1, 2, 3], [4, 5, 6]]
+    >>> print(matrix_divided(m, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+    >>> print(matrix_divided(m, 1))
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    >>> print(matrix_divided(m, 1))
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+    >>> print(matrix_divided(m, -2))
+    [[-0.5, -1.0, -1.5], [-2.0, -2.5, -3.0]]
+    >>> m = [[1]]
+    >>> print(matrix_divided(m, 10))
+    [[0.1]]
+    >>> m = [[1], [2], [3], [4], [5], [6]]
+    >>> print(matrix_divided(m, 10))
+    [[0.1], [0.2], [0.3], [0.4], [0.5], [0.6]]
+
+test errors:
+    >>> m = [[1, 2, 3], [4, 5, 6]]
+    >>> print(matrix_divided(m, 0))
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+    >>> print(matrix_divided(m, "hell yeah"))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+    >>> print(matrix_divided([], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided([[]], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided([["22323"]], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided([21], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided([None], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided(m, False))
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+    >>> m = [[1, 2, 3], [4, 5, 6], [2]]
+    >>> print(matrix_divided([None], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> m = [[1, 2, 3], [4, 5, 6], "[2]"]
+    >>> print(matrix_divided([None], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> print(matrix_divided([1,2,"s"], 10))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
