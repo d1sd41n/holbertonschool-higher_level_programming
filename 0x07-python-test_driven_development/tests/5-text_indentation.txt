@@ -1,0 +1,48 @@
+The 5-text_indentation module
+==========================================
+Using text_indentation
+************************************+*****
+
+module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+text:
+    >>> text_indentation("hell")
+    hell
+    >>> text_indentation("hell yeah!")
+    hell yeah!
+    >>> text = "hell yeah!. hell yeah? fuck yeah!: hell yeah!"
+    >>> text_indentation(text)
+    hell yeah!.
+    <BLANKLINE>
+    hell yeah?
+    <BLANKLINE>
+    fuck yeah!:
+    <BLANKLINE>
+    hell yeah!
+    >>> text_indentation(".:?")
+    .
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    >>> text_indentation("")
+
+errors:
+    >>> text_indentation(666)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    >>> text_indentation([666])
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    >>> text_indentation(True)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
