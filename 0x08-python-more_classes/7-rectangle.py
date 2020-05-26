@@ -94,7 +94,7 @@ class Rectangle:
         else:
             w = self.__width
             h = self.__height
-            d = self.print_symbol
+            d = str(self.print_symbol)
             r = ""
             r = "\n".join(d * w for i in range(h))
             return r
