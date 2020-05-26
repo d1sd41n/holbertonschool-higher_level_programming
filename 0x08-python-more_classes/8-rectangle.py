@@ -130,9 +130,10 @@ class Rectangle:
         """
         if type(rect_1) != Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
-        elif type(rect_2) != Rectangle:
+        if type(rect_2) != Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        elif rect_1.area() <= rect_2.area():
-            return rect_2
-        else:
+
+        if rect_1.area() >= rect_2.area():
             return rect_1
+        else:
+            return rect_2
