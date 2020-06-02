@@ -5,4 +5,18 @@ Using MyList
 
 test numbers:
     >>> MyList = __import__('1-my_list').MyList
-
+    >>> l = MyList()
+    >>> l
+    []
+    >>> l = MyList()
+    >>> l.append(666)
+    >>> l.append(-666)
+    >>> l.append(333 * 2)
+    >>> l
+    [666, -666, 666]
+    >>> l.append(1)
+    >>> l.append(2)
+    >>> l
+    [666, -666, 666, 1, 2]
+    >>> l.print_sorted()
+    [-666, 1, 2, 666, 666]
