@@ -8,9 +8,13 @@ test numbers:
     >>> l = MyList()
     >>> l
     []
+    >>> l.print_sorted()
+    []
     >>> l = MyList()
     >>> l.append(666)
     >>> l
+    [666]
+    >>> l.print_sorted()
     [666]
     >>> l = MyList()
     >>> l.append(666)
