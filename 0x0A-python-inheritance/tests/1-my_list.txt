@@ -28,3 +28,20 @@ test numbers:
     [666, -666, 666, 1, 2]
     >>> l.print_sorted()
     [-666, 1, 2, 666, 666]
+    >>> l = MyList()
+    >>> l.append(666)
+    >>> l.append(-666)
+    >>> l.append(333 * 2)
+    >>> l.append(-1)
+    >>> l.append(-2)
+    >>> l.append(-4)
+    >>> l.append(-666)
+    >>> l.append(6)
+    >>> l.append(1)
+    >>> l.append(33)
+    >>> l
+    [666, -666, 666, -1, -2, -4, -666, 6, 1, 33]
+    >>> l.print_sorted()
+    [-666, -666, -4, -2, -1, 1, 6, 33, 666, 666]
+
+
