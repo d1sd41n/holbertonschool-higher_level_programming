@@ -8,7 +8,8 @@ test numbers:
     >>> l = MyList()
     >>> l
     []
-    >>> l = MyList(666)
+    >>> l = MyList()
+    >>> l.append(666)
     >>> l
     [666]
     >>> l = MyList()
