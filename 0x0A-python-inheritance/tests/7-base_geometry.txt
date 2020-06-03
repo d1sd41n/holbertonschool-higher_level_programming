@@ -5,3 +5,21 @@ Using BaseGeometry
 
 test BaseGeometry:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> l = BaseGeometry()
+
+    >>> l = BaseGeometry()
+
+    >>> l.integer_validator("satan", 666)
+
+    >>> l.integer_validator("satan", -666)
+    Traceback (most recent call last):
+        ....
+    ValueError: satan must be greater than 0
+    >>> l.integer_validator("satan", "666")
+    Traceback (most recent call last):
+        ...
+    TypeError: satan must be an integer
+    >>> l.area()
+	Traceback (most recent call last):
+      ...
+    Exception: area() is not implemented
