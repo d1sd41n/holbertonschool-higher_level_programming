@@ -47,4 +47,3 @@ class Student:
         """
         for i in json:
             self.__dict__[i] = json[i]
-
