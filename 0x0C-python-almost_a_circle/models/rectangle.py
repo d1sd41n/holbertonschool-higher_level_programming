@@ -127,3 +127,15 @@ class Rectangle(Base):
             self.id, self.x, self.y,
             self.width, self.height
         )
+
+    def update(self, *args, **kwargs):
+        """[summary]
+        """
+        atr = ['id', 'width', 'height', 'x', 'y']
+
+        if args is None or len(args) == 0:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+            return
+        for i, v in enumerate(args[:5]):
+            setattr(self, atr[i], v)
