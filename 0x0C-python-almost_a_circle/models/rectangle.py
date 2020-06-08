@@ -139,3 +139,14 @@ class Rectangle(Base):
             return
         for i, v in enumerate(args[:5]):
             setattr(self, atr[i], v)
+
+    def to_dictionary(self):
+        """
+        Returns:
+            [type]: [description]
+        """
+        dict_ = {'id': self.id, 'width': self.width,
+                 'height': self.height, 'x': self.x,
+                 'y': self.y
+                 }
+        return dict_
