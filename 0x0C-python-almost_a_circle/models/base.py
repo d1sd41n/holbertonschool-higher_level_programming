@@ -19,7 +19,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """
+        """dict 2 string
         Args:
             list_dictionaries ([type]): [description]
 
@@ -48,7 +48,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """
+        """string 2 dict
         Args:
             json_string ([type]): [description]
 
