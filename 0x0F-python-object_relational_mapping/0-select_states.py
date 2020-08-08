@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# query all states from the db
+""" query all states from the db
+"""
 import sys
 import MySQLdb
 

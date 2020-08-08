@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# query all states from the db that starts with N
+""" query all states from the db that starts with N
+"""
 import sys
 import MySQLdb
 
